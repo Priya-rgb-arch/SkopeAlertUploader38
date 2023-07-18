@@ -1,8 +1,9 @@
 #!/bin/bash
 # Set the path to the SKOPE rejects file
 SKOPE_REJECTS_FILE="/home/sriharipriya/SkopeAlertUploader/source/skope_rejects.txt"
+echo "inside skope alert file"
 # Set the email address to receive alerts
-ALERT_EMAIL="reshmachavan12196@gmail.com"
+#ALERT_EMAIL="reshmachavan12196@gmail.com"
 # Set the threshold for the number of rejects to trigger an alert
 REJECTS_THRESHOLD=10
 # Check if the SKOPE rejects file exists
@@ -14,5 +15,5 @@ then
   if [ "$num_rejects" -ge "$REJECTS_THRESHOLD" ];
   then
     # Send an email alert
-    echo "Alert: SKOPE rejects exceeded the threshold of $REJECTS_THRESHOLD" | mail -s "SKOPE Rejects Alert" "$ALERT_EMAIL"
+    echo "Alert: SKOPE rejects exceeded the threshold of $REJECTS_THRESHOLD"
   fi

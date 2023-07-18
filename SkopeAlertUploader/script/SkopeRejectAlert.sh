@@ -14,6 +14,3 @@ if [ -f "$SKOPE_REJECTS_FILE" ]; then
     # Send an email alert
     echo "Alert: SKOPE rejects exceeded the threshold of $REJECTS_THRESHOLD" | mail -s "SKOPE Rejects Alert" "$ALERT_EMAIL"
   fi
-else
-  echo "SKOPE rejects file not found."
-fi
